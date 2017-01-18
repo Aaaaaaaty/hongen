@@ -1,4 +1,18 @@
 <view class="container">
+    <view class="sm-sort">
+        <view class="inner">
+            <block wx:for = "{{loadJson}}" wx:for-item = "item" wx:key ="uq">
+                <view   class="{{item.className}} {{item.className}}{{ index + 1 }} {{ifOn}}"
+                        id="{{index + 1}}"
+                        bindtap="changeImg">
+                    {{item.name}}
+                </view>
+            </block>
+        </view>
+    </view>
+    <view class="down">
+        <view class="down_title">童话</view>
+    </view>
     <view class="starlist">
         <view class="stars star1"><view class="starblock"></view><view class="shine"></view><view class="shadow"></view></view>
         <view class="stars star2"><view class="starblock"></view><view class="shine"></view><view class="shadow"></view></view>

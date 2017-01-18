@@ -7,6 +7,7 @@
   background-color: #336ea6;
   position: fixed;
 }
+
 .stars {
   position: absolute;
   width: 13rpx;

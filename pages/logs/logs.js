@@ -1,19 +1,27 @@
 // pages/logs/logs.js
 Page({
-  data:{},
-  onLoad:function(options){
-    // 页面初始化 options为页面跳转所带来的参数
+  data:{
+    loadJson: [
+      {name:'魔力之城', className:'card'},
+      {name:'冒险岛', className:'card'},
+      {name:'科学馆', className:'card'},
+      {name:'英雄王国', className:'card'},
+      {name:'成长的我', className:'card'},
+      {name:'历史长廊', className:'card'},
+      {name:'童话天地', className:'card'},
+      {name:'动物乐园', className:'card'},
+      {name:'认知', className:'card'},
+      {name:'人格', className:'card'},
+      {name:'习惯', className:'card'},
+      {name:'情绪', className:'card'},
+      {name:'习惯', className:'card'}
+    ],
+     ifOn: ''
   },
-  onReady:function(){
-    // 页面渲染完成
-  },
-  onShow:function(){
-    // 页面显示
-  },
-  onHide:function(){
-    // 页面隐藏
-  },
-  onUnload:function(){
-    // 页面关闭
+  changeImg: function(e) {
+    var id = e.target.id
+    this.setData({
+      ifOn: 'on' + id
+    })
   }
 })
