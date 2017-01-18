@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/logs/logs",
+    "pages/index/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#352649",
+    "navigationBarTitleText": "故事故事",
+    "navigationBarTextStyle":"white"
+  }
+}

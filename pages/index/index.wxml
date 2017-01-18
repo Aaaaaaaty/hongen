@@ -1,0 +1,56 @@
+<view class="container">
+    <view class="outer" id="player">
+        <view class="radioWrap">
+            <view class="bigbg runbg"></view>
+            <view class="bg1"></view>
+            <view   id="timer" 
+                    class="timer {{ifTransition}}" 
+                    style="transform:rotate({{currentDeg}}deg);-webkit-transform:rotate({{currentDeg}}deg)">
+                <span>{{currentTimeHTML}}{{durationTimeHTML}}</span>
+            </view>
+            <view class="number"></view>
+            <span   class="rotatebg {{ifTransition}}" 
+                    style="transform:rotate({{currentDeg}}deg);-webkit-transform:rotate({{currentDeg}}deg)">
+            </span>
+            <view class="reflected"></view>
+            <view class="runstar {{ifTransition}}" style="transform:rotate({{currentDeg}}deg);-webkit-transform:rotate({{currentDeg}}deg)"></view>
+            <view>
+              <image class="coverBg" src="http://10.2.44.254/images/cover.png"  alt=""></image>
+            </view>
+        </view>
+    </view>
+    <view class="fixedBottom">
+        <view class="stroyTit">{{musicList.name}}</view>
+        <view class="fixed_subtitle">{{musicList.author}}</view>
+        <view class="playbtn">
+            <view class="prev l" bindtap="musicChange"></view>
+            <view href="javascript:;" id="playBtn" class="l {{change}}" style="{{changePlayIcon}}" bindtap="musicBtnPlay"></view>
+            <view class="next l" bindtap="musicChange"></view>
+        </view>
+        <view class="down"></view>
+        <view class="down_title">童话</view>
+    </view>
+    
+    <view class="starlist">
+        <view class="stars star1"><view class="starblock"></view><view class="shine"></view><view class="shadow"></view></view>
+        <view class="stars star2"><view class="starblock"></view><view class="shine"></view><view class="shadow"></view></view>
+        <view class="stars star3"><view class="starblock"></view><view class="shine"></view><view class="shadow"></view></view>
+        <view class="stars star4"><view class="starblock"></view><view class="shine"></view><view class="shadow"></view></view>
+        <view class="stars star5"><view class="starblock"></view><view class="shine"></view><view class="shadow"></view></view>
+        <view class="stars star6"><view class="starblock"></view><view class="shine"></view><view class="shadow"></view></view>
+        <view class="stars star7"><view class="starblock"></view><view class="shine"></view><view class="shadow"></view></view>
+        <view class="stars star8"><view class="starblock"></view><view class="shine"></view><view class="shadow"></view></view>
+        <view class="stars star9"><view class="starblock"></view><view class="shine"></view><view class="shadow"></view></view>
+        <view class="stars star10"><view class="starblock"></view><view class="shine"></view><view class="shadow"></view></view>
+    </view>
+    
+    <view class="meteors">
+        <view class="meteor meteor1"></view>
+        <view class="meteor meteor2"></view>
+        <view class="meteor meteor3"></view>
+        <view class="meteor meteor4"></view>
+    </view>
+    
+</view> 
+<audio  src="{{musicList.src}}" id="myAudio" bindtimeupdate="timeUpdate"></audio>
+
