@@ -144,7 +144,7 @@
   text-align: center;
   position: relative;
   z-index: 1000; 
-  width: 359rpx;
+  width: 153rpx;
   margin: 0 auto;
 }
 
@@ -162,18 +162,27 @@
   clear:both;        
   visibility:hidden;
 }
+.bigBtn {
+  position: absolute;
+  padding: 40rpx;
+}
+.bigBtn.n{
+  left:-135rpx;
+  top:10rpx;
+}
+.bigBtn.p{
+  left:170rpx;
+  top:10rpx;
+}
 .next, .prev {
   width: 43rpx;
   height: 50rpx;
-  margin-top: 58rpx;
 }
 .next {
-  margin-left: 60rpx;
   background: url(http://10.2.44.254/images/btn_1.png) 0 0 no-repeat;
   background-size: 184rpx 84rpx;
 }
 .prev {
-  margin-right: 60rpx;
   background: url(http://10.2.44.254/images/btn_1.png) -50rpx 0 no-repeat;
   background-size: 184rpx 84rpx;
 }

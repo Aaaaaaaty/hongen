@@ -23,9 +23,13 @@
         <view class="stroyTit">{{musicList.name}}</view>
         <view class="fixed_subtitle">{{musicList.author}}</view>
         <view class="playbtn">
-            <view class="prev l" bindtap="musicChange"></view>
+            <view class="bigBtn n" bindtao="musicChange">
+                <view class="prev l" bindtap="musicChange"></view>
+            </view>
             <view href="javascript:;" id="playBtn" class="l {{change}}" style="{{changePlayIcon}}" bindtap="musicBtnPlay"></view>
-            <view class="next l" bindtap="musicChange"></view>
+            <view class="bigBtn p" bindtao="musicChange">
+                <view class="next l" bindtap="musicChange"></view>
+            </view>
         </view>
         <view class="down"></view>
         <view class="down_title">童话</view>
@@ -52,5 +56,9 @@
     </view>
     
 </view> 
-<audio  src="{{musicList.src}}" id="myAudio" bindtimeupdate="timeUpdate"></audio>
+<audio  
+        id="myAudio" 
+        bindtimeupdate="timeUpdate"
+        bindplay="testPlay"
+        binderror="testerror"></audio>
 

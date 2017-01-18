@@ -5,15 +5,17 @@ Page({
       author: '暗杠',
       src: 'http://10.2.44.254/daocaoren.mp3'
     },
+    musicsrc:"",
     isPlay: false,
     change: 'play',
     currentTimeHTML: '',
     durationTimeHTML: '',
     currentDeg: 0,
-    ifTransition: ''
   },
   onReady: function(e) {
     this.audioCtx = wx.createAudioContext('myAudio')
+    var musicurl="http://10.2.44.254/daocaoren.mp3"
+      this.audioCtx.setSrc(musicurl)
   },
   musicBtnPlay: function() {
     if(this.data.isPlay) {
@@ -58,29 +60,30 @@ Page({
     }
   },
   musicChange: function() {
+    console.log("CLICI")
+    var musicurl='http://10.2.44.254/daocaoren.mp3'
+    this.audioCtx.setSrc(musicurl)
     this.setData({
       musicList: {
         name: '白河',
         author: '暗杠',
-        src: 'http://10.2.44.254/youai.mp3',
       },
-      // ifTransition: 'transitionN',
+      musicsrc:musicurl
     })
-    this.audioCtx = wx.createAudioContext('myAudio')
-    this.audioCtx.setSrc(this.data.musicList.src)
     if(!this.data.isPlay) {
-      this.audioCtx.play()
-      this.setData({
+     this.setData({
         change: '',
         isPlay: !this.data.isPlay,
       })
-    } else {
-      this.audioCtx.play()
-    }
-    // setTimeout(() => {
-    //   this.setData({
-    //     ifTransition: ''
-    //   })
-    // }, 500)
+    } 
+     this.audioCtx.play()
+  },
+  testPlay: function() {
+    console.log('play')
+  },
+  testerror: function() {
+    this.audioCtx.setSrc(this.data.musicsrc)
+    this.audioCtx.play()
+    console.log('error')
   }
 })
