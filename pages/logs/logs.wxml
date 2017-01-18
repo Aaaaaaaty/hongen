@@ -1,2 +1,20 @@
-<!--pages/logs/logs.wxml-->
-<text>pages/logs/logs.wxml</text>
+<view class="container">
+    <view class="starlist">
+        <view class="stars star1"><view class="starblock"></view><view class="shine"></view><view class="shadow"></view></view>
+        <view class="stars star2"><view class="starblock"></view><view class="shine"></view><view class="shadow"></view></view>
+        <view class="stars star3"><view class="starblock"></view><view class="shine"></view><view class="shadow"></view></view>
+        <view class="stars star4"><view class="starblock"></view><view class="shine"></view><view class="shadow"></view></view>
+        <view class="stars star5"><view class="starblock"></view><view class="shine"></view><view class="shadow"></view></view>
+        <view class="stars star6"><view class="starblock"></view><view class="shine"></view><view class="shadow"></view></view>
+        <view class="stars star7"><view class="starblock"></view><view class="shine"></view><view class="shadow"></view></view>
+        <view class="stars star8"><view class="starblock"></view><view class="shine"></view><view class="shadow"></view></view>
+        <view class="stars star9"><view class="starblock"></view><view class="shine"></view><view class="shadow"></view></view>
+        <view class="stars star10"><view class="starblock"></view><view class="shine"></view><view class="shadow"></view></view>
+    </view>
+    <view class="meteors">
+        <view class="meteor meteor1"></view>
+        <view class="meteor meteor2"></view>
+        <view class="meteor meteor3"></view>
+        <view class="meteor meteor4"></view>
+    </view>
+</view>
